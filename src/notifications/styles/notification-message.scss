@@ -1,0 +1,113 @@
+.notification-message {
+   display: -webkit-flex;
+   display: flex;
+   background-color: $success-primary;
+   border-radius: 4px;
+   width: 400px;
+   position: relative;
+   margin-top: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+
+  
+  
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.7);
+    opacity: 0.5;
+    &:hover {
+      transition: 0.25s;
+      opacity: 1;
+    }
+  }
+  
+  .note-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255,255,255,0.3);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    
+    .note-progress-bar {
+      height: inherit;
+      width: 0%;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
+  }
+  
+  .note-icon {
+    flex: 1 1 0;
+    padding: 10px 0;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+  
+  .note-body {
+    padding: 10px;
+    width: 355px;
+    color: white;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .note-icon-success {
+    background-color: $success-secondary;
+  }
+  
+  .note-icon-info {
+    background-color: $info-secondary;
+  }
+  
+  .note-icon-error {
+    background-color: $error-secondary;
+  }
+  
+  .note-icon-warning {
+    background-color: $warning-secondary;
+  }
+}
+
+.note-body-success {
+  background-color: $success-primary;
+}
+
+.note-body-info {
+  background-color: $info-primary;
+}
+
+.note-body-warning {
+  background-color: $warning-primary;
+}
+
+.note-body-error {
+  background-color: $error-primary;
+}
+
+.note-success {
+  background-color: $success-bar-fill;
+}
+
+.note-info {
+  background-color: $info-bar-fill;
+}
+
+.note-error {
+  background-color: $error-bar-fill;
+}
+
+.note-warning {
+  background-color: $warning-bar-fill;
+}

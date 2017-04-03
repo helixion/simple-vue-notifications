@@ -1,0 +1,11 @@
+{
+  "name": "simple-vue-notifications",
+  "version": "1.0.0",
+  "description": "Simple Notification popups for vuejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "helixion <h3lix0@gmail.com>",
+  "license": "ISC"
+}
