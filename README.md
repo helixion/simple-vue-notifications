@@ -46,4 +46,16 @@ Unless you pass an object with the property of htmlSafe: true like so.
 
 htmlSafe will default to false.
 
+You can reposition the notification-container by passing a prop with the name :position to the component and one of the following strings:
+
+top-right
+
+top-left
+
+top-center
+
+bottom-center
+
+## Animations & Icons
+Drop in font-awesome and/or animate.css
 
