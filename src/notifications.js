@@ -15,7 +15,7 @@ module.exports = (function() {
 	};
 
 	const _checkHtmlSafe = function(obj) {
-		const opts = (typeof obj == 'object') ? obj : null;
+		const opts = (typeof obj == 'object' && typeof obj == 'boolean') ? obj : null;
 
 		if (opts) {
             if (opts.hasOwnProperty('htmlSafe')) {
@@ -34,7 +34,7 @@ module.exports = (function() {
 			show: true,
 			message,
 			type,
-            htmlSafe: _checkHtmlSafe(options)
+            htmlSafe: _checkHtmlSafe(options),
 		};
 
 		
