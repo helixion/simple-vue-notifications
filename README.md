@@ -4,7 +4,7 @@
 
 import into main.js: 
 
-`import * as Notifications from 'simple-vue-notifications`
+`import Notifications from 'simple-vue-notifications`
 
 `Vue.use(Notifications, { global: true || false });`
 
