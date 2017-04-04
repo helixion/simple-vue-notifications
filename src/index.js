@@ -6,13 +6,7 @@ import {
 
 
 
-export function install(Vue, options) {
-
-	if (install.installed) {
-		return;
-	}
-
-	install.installed = true;
+export default function (Vue, options) {
 
 	const global = (typeof options == 'object') ? options.global : null;
 
@@ -35,5 +29,4 @@ export function install(Vue, options) {
 		Vue.component('app-notifications', component);
 	}
 
-	
 }

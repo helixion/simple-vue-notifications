@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import Notification from './Notification.vue';
+import Notification from './NotificationMessage.vue';
 
 export default {
 	name: 'notifications',
 	components: {
-		appNotification: Notification
+		appNotification: NotificationMessage
 	},
 	props: {
 		duration: {
