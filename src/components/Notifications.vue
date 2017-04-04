@@ -20,7 +20,7 @@ import Notification from './NotificationMessage.vue';
 export default {
 	name: 'notifications',
 	components: {
-		appNotification: NotificationMessage
+		appNotification: Notification
 	},
 	props: {
 		duration: {
