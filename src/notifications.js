@@ -15,11 +15,11 @@ module.exports = (function() {
 	};
 
 	const _checkHtmlSafe = function(obj) {
-		const opts = (typeof obj == 'object' && typeof obj == 'boolean') ? obj : null;
+		const opts = (typeof obj == 'object') ? obj : null;
 
 		if (opts) {
             if (opts.hasOwnProperty('htmlSafe')) {
-                if (opts.htmlSafe) {
+                if (typeof opts.htmlSafe == 'boolean' && opts.htmlSafe) {
                     return true;
                 } 
             } 
