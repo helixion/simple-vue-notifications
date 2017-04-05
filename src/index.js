@@ -8,6 +8,12 @@ import {
 
 export default function install(Vue, options) {
 
+	if (install.installed) {
+		return;
+	}
+
+	install.installed = true;
+
 	const global = (typeof options == 'object') ? options.global : null;
 
 	Object.defineProperty(Vue.prototype, '$notification', {
