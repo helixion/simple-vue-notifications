@@ -9,6 +9,10 @@
             v-for="note in shownNotifications"
             :notification="note"
             :duration="duration"
+            :success="success"
+            :error="error"
+            :warning="warning"
+            :info="info"
             :key="note.id">
         </app-notification>
     </transition-group>
@@ -23,16 +27,34 @@ export default {
 		appNotification: Notification
 	},
 	props: {
-		duration: {
-			type: Number,
-			default: () => 5000
-		},
-        
+        //life expectacy of notification in milliseconds
+        duration: {
+            type: Number,
+            default: () => 5000
+        },
+        //position of the notifications container
         position: {
             type: String,
             default: () => 'top-right'
+        },
+        //icons
+        success: {
+            type: String,
+            default: () => 'fa fa-check'
+        },
+        error: {
+            type: String,
+            default: () => 'fa fa-exclamation'
+        },
+        warning: {
+            type: String,
+            default: () => 'fa-exclamation-triangle'
+        },
+        info: {
+            type: String,
+            default: () => 'fa fa-info'
         }
-	},
+    },
 	computed: {
 		shownNotifications() {
 			return this.$notes.filter(note => note.show === true);

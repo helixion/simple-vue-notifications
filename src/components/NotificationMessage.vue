@@ -47,7 +47,19 @@ export default {
 		notification: {
 			type: Object,
 			required: true
-		}
+		},
+		success: {
+			type: String
+		},
+		warning: {
+			type: String
+		},
+		info: {
+			type: String
+		},
+		error: {
+			type: String
+		},
 	},
 
 	data() {
@@ -71,16 +83,16 @@ export default {
 		types() {
 			switch(this.notification.type) {
 				case 'success':
-					return 'fa fa-check';
+					return this.success;
 					break;
 				case 'info':
-					return 'fa fa-info';
+					return this.error;
 					break;
 				case 'warning':
-					return 'fa fa-exclamation-triangle';
+					return this.warning;
 					break;
 				case 'error':
-					return 'fa fa-exclamation';
+					return this.error;
 					break;
 				default:
 					break;
