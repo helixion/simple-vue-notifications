@@ -1,6 +1,6 @@
 {
   "name": "simple-vue-notifications",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Simple Notification popups for vuejs",
   "main": "/src/index.js",
   "scripts": {
