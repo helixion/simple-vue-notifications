@@ -1,6 +1,6 @@
 <template>
 	<div :class="containerClasses">
-  		<div class="close" @click="close">&times;</div>
+  		<div class="close" @click.once="close">&times;</div>
 		<div :class="iconClasses">
 		    <i :class="types" aria-hidden="true"></i>
 		</div>
