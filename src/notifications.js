@@ -18,13 +18,13 @@ module.exports = (function() {
 		const opts = (typeof obj == 'object') ? obj : null;
 
 		if (opts) {
-            if (opts.hasOwnProperty('htmlSafe')) {
-                if (typeof opts.htmlSafe == 'boolean' && opts.htmlSafe) {
-                    return true;
-                } 
-            } 
-        }
-        return false;
+		    if (opts.hasOwnProperty('htmlSafe')) {
+			if (typeof opts.htmlSafe == 'boolean' && opts.htmlSafe) {
+			    return true;
+			} 
+		    } 
+		}
+		return false;
 	}
 
     const addNotification = function(message, type, options) {
@@ -34,21 +34,21 @@ module.exports = (function() {
 			return;
 		}
 
-		if (typeof type == 'undefined' || !type || typeof type !== 'string') {
-			console.error('[addNotification]: Must include a type of notification in string form: success, error, info, warning');
-			return;
-		}
+	if (typeof type == 'undefined' || !type || typeof type !== 'string') {
+		console.error('[addNotification]: Must include a type of notification in string form: success, error, info, warning');
+		return;
+	}
 
 
-		const data = {
-			id: _generateId(10),
-			show: true,
-			message,
-			type,
-            htmlSafe: _checkHtmlSafe(options),
-		};
+	const data = {
+		id: _generateId(10),
+		show: true,
+		message,
+		type,
+		htmlSafe: _checkHtmlSafe(options),
+	};
 
-		this.$notes.unshift(data);
+	this.$notes.unshift(data);
 	};
 
 	const removeNotification = function(id) {
