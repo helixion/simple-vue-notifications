@@ -2,7 +2,7 @@
 	<div :class="containerClasses">
   		<div class="close" @click.once="close">&times;</div>
 		<div :class="iconClasses">
-		    <i :class="types" aria-hidden="true"></i>
+		    <i :class="type" aria-hidden="true"></i>
 		</div>
 		<div class="note-body">
 			<template v-if="notification.htmlSafe">
@@ -80,23 +80,8 @@ export default {
 		progressBarClasses() {
 			return ['note-progress-bar', `note-${this.notification.type}`]
 		},
-		types() {
-			switch(this.notification.type) {
-				case 'success':
-					return this.success;
-					break;
-				case 'info':
-					return this.error;
-					break;
-				case 'warning':
-					return this.warning;
-					break;
-				case 'error':
-					return this.error;
-					break;
-				default:
-					break;
-			}
+		type() {
+			return this.$props[this.notification.type];
 		}
 	},
 
@@ -104,7 +89,6 @@ export default {
 		close() {
 			clearInterval(this.timer);
 			this.timer = null;
-			this.progress = 0;
 			this.notification.show = false;
 			setTimeout(() => {
 				this.$notification.removeNotification(this.notification.id);

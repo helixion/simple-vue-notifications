@@ -1,5 +1,6 @@
 <template>
     <transition-group
+        v-show="notifications.length > 0"
         :class="containerClasses"
         tag="div"
         enter-active-class="animated flipInX"
@@ -56,6 +57,9 @@ export default {
         }
     },
 	computed: {
+        notifications() {
+            return this.$notes;
+        },
 		shownNotifications() {
 			return this.$notes.filter(note => note.show === true);
 		},
