@@ -13,7 +13,7 @@ export default function install(Vue, options) {
 	}
 
 	install.installed = true;
-
+	//global is true by default.
 	const global = (typeof options == 'object') ? options.global : true;
 
 	Object.defineProperty(Vue.prototype, '$notification', {
