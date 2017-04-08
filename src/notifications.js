@@ -25,14 +25,14 @@ module.exports = (function() {
 		    } 
 		}
 		return false;
-	}
+	};
 
     const addNotification = function(message, type, options) {
 
     	if (typeof message == 'undefined' || !message || typeof message !== 'string') {
-			console.error('[addNotification]: You must enter a message to be displayed');
-			return;
-		}
+		console.error('[addNotification]: You must enter a message to be displayed');
+		return;
+	}
 
 	if (typeof type == 'undefined' || !type || typeof type !== 'string') {
 		console.error('[addNotification]: Must include a type of notification in string form: success, error, info, warning');
@@ -49,7 +49,7 @@ module.exports = (function() {
 	};
 
 	this.$notes.unshift(data);
-	};
+    };
 
 	const removeNotification = function(id) {
 		const notifications = this.$notes;
@@ -59,7 +59,7 @@ module.exports = (function() {
 		} else {
 			console.error(`[removeNotification]: Couldn't remove the notification`);
 		}
-	}
+	};
 
 	return {
 		addNotification,
