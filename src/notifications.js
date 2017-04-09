@@ -19,7 +19,7 @@ module.exports = (function() {
 
 		if (opts) {
 		    if (opts.hasOwnProperty('htmlSafe')) {
-			if (typeof opts.htmlSafe == 'boolean' && opts.htmlSafe) {
+			if (typeof opts.htmlSafe === 'boolean' && opts.htmlSafe) {
 			    return true;
 			} 
 		    } 
@@ -29,12 +29,12 @@ module.exports = (function() {
 
     const addNotification = function(message, type, options) {
 
-    	if (typeof message == 'undefined' || !message || typeof message !== 'string') {
+    	if (typeof message === 'undefined' || !message || typeof message !== 'string') {
 		console.error('[addNotification]: You must enter a message to be displayed');
 		return;
 	}
 
-	if (typeof type == 'undefined' || !type || typeof type !== 'string') {
+	if (typeof type === 'undefined' || !type || typeof type !== 'string') {
 		console.error('[addNotification]: Must include a type of notification in string form: success, error, info, warning');
 		return;
 	}
