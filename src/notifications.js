@@ -15,7 +15,7 @@ module.exports = (function() {
 	};
 
 	const _checkHtmlSafe = function(obj) {
-		const opts = (typeof obj == 'object') ? obj : null;
+		const opts = (typeof obj === 'object') ? obj : null;
 
 		if (opts) {
 		    if (opts.hasOwnProperty('htmlSafe')) {
